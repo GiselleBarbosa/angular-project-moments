@@ -11,6 +11,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { NewMomentComponent } from './components/pages/new-moment/new-moment.component';
+import { MomentFormComponent } from './components/moment-form/moment-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NewMomentComponent } from './components/pages/new-moment/new-moment.com
     HomeComponent,
     NotFoundComponent,
     NewMomentComponent,
+    MomentFormComponent,
   ],
   imports: [
     BrowserModule,
