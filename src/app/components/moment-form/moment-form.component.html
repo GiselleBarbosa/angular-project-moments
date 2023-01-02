@@ -1,1 +1,34 @@
-<p>moment-form works!</p>
+<mat-card>
+  <mat-card-content>
+
+    <div class="d-flex justify-content-center align-items-center flex-column">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label for="title">Titulo</mat-label>
+          <input matInput placeholder="Digite um titulo para sua postagem">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Descrição</mat-label>
+          <textarea matInput placeholder="Descreva este momento..."></textarea>
+        </mat-form-field>
+
+
+          <mat-label>Escolher foto: </mat-label>
+          <button class="ms-2" type="button" mat-raised-button (click)="fileInput.click()">Enviar Foto</button>
+          <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+
+          <div class="submit mt-5 text-center">
+            <button class="btn-share" mat-raised-button>
+              {{ btnText }}
+            </button>
+    
+          </div>
+
+    
+
+      </form>
+    </div>
+
+  </mat-card-content>
+</mat-card>
