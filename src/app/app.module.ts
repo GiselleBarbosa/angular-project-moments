@@ -10,6 +10,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
+import { NewMomentComponent } from './components/pages/new-moment/new-moment.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SharedModule } from './shared/shared.module';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NewMomentComponent,
   ],
   imports: [
     BrowserModule,

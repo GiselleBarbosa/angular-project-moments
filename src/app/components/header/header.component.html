@@ -1,0 +1,47 @@
+<mat-toolbar class="header mat-elevation-z10">
+
+  <img class="logo-moments me-3" src="../../../assets/favico.png" alt="moments" routerLink="/">
+
+  <mat-list class="btn-home visible me-5" mat-flat-button routerLink="/">Início
+  </mat-list>
+
+  <mat-list class="btn-navbar me-4" routerLink="moments/new">
+    Compartilhar
+  </mat-list>
+
+  <mat-list class="btn-navbar" routerLink="about">
+    Sobre
+  </mat-list>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    aria-controls="offcanvasNavbar">
+    <mat-icon>density_small</mat-icon>
+  </button>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+      
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">
+            Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="moments/new">Compartilhar</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about">Sobre</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</mat-toolbar>

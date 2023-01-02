@@ -13,7 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   declarations: [],
   imports: [
     CommonModule
-  ], 
+  ],
   exports: [
     MatInputModule,
     MatFormFieldModule,
@@ -21,8 +21,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     MatSelectModule,
     MatToolbarModule,
-    MatIconModule
-  
+    MatIconModule,
+
   ]
 })
 export class SharedModule { }
