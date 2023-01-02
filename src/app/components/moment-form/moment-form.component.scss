@@ -8,6 +8,12 @@
   width: 100%;
 }
 
-.btn-share{
+.btn-share {
   background: #dec129;
+  transition: 0.5s;
+}
+
+.btn-share:hover,
+.btn-add:hover {
+  background: #f1e292;
 }
