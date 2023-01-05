@@ -1,28 +1,40 @@
 <mat-card>
   <mat-card-content>
     <div class="d-flex justify-content-center align-items-center flex-column">
-      <form class="myForm">
-        <mat-form-field class="mat-form-field">
-          <mat-label for="title">Titulo</mat-label>
-          <input matInput placeholder="Digite um titulo para sua postagem">
-        </mat-form-field>
+      <form class="myForm was-validated" (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
 
-        <mat-form-field class="mat-form-field">
-          <mat-label>Descrição</mat-label>
-          <textarea matInput placeholder="Descreva este momento..."></textarea>
-        </mat-form-field>
-
-
-          <mat-label>Escolher foto: </mat-label>
-          <button class="btn-submit ms-2 mt-3" type="button" mat-raised-button (click)="fileInput.click()">Enviar Foto</button>
-          <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
-
-          <div class="submit mt-5 text-center">
-            <button class="btn-text" mat-raised-button>
-              {{ btnText }}
-            </button>
-    
+        <div class="col-mb-2">
+          <label for="title" class="form-label">Título</label>
+          <input type="text" class="form-control is-invalid" placeholder="Digite um titulo" formControlName="title"
+            required>
+          <div class="invalid-feedback" *ngIf="title.invalid && formDir.submitted">
+            <p *ngIf="title.errors?.['required']">
+              Titulo é obrigatório
+            </p>
           </div>
+        </div>
+
+        <div class="col-mb-2 mt-4">
+          <label for="title" class="form-label">Descrição</label>
+          <input type="text" class="form-control is-invalid" placeholder="Digite uma descrição do momento"
+            formControlName="description" required>
+          <div class="invalid-feedback" *ngIf="description.invalid && formDir.submitted">
+            <p *ngIf="description.errors?.['required']">
+              Descrição é obrigatória
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3 mt-4">
+          <label for="image" class="form-label">Foto deste momento</label>
+          <input type="file" class="form-control" (change)="onFileSelected($event)" required>
+        </div>
+
+        <div class="submit mt-4 text-center">
+          <div class="mb-3">
+            <button class="btn btn-warning" type="submit"> {{ btnText }}</button>
+          </div>
+        </div>
       </form>
     </div>
   </mat-card-content>
