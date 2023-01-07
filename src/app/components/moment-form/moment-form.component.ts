@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Moment } from 'src/app/Moment';
 
 @Component({
   selector: 'app-moment-form',
@@ -7,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./moment-form.component.scss']
 })
 export class MomentFormComponent implements OnInit {
+  @Output() onSubmit = new EventEmitter<Moment>()
   @Input() btnText!: string;
   srcResult: any;
 
@@ -22,7 +24,6 @@ export class MomentFormComponent implements OnInit {
       image: new FormControl(''),
     });
   }
-
 
   get title() {
     return this.momentForm.get('title')!;
@@ -41,6 +42,8 @@ export class MomentFormComponent implements OnInit {
     if (this.momentForm.invalid) {
       return;
     }
-    console.log( this.momentForm.value,  'Formulário sucesso!');
+    console.log( this.momentForm.value);
+
+    this.onSubmit.emit(this.momentForm.value)
   }
 }
