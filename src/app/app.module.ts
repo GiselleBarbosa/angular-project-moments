@@ -15,6 +15,8 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { NewMomentComponent } from './components/pages/new-moment/new-moment.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { SharedModule } from './shared/shared.module';
     NotFoundComponent,
     NewMomentComponent,
     MomentFormComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
