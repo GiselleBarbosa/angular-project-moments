@@ -1,13 +1,13 @@
 .message {
   position: fixed;
-  top: 8em;
+  top: 5em;
   width: 50%;
   margin-left: 50%;
   left: -25%;
   z-index: 10;
-  background-color: transparent #fff;
+  background-color: #fff;
   border: 2px solid #dec129;
-  padding: 1.5em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
 }
@@ -18,8 +18,8 @@
   margin-bottom: 1%;
 }
 .message-header h2 {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .message-header button {
@@ -28,6 +28,6 @@
 
 .message p {
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 200;
 
 }
