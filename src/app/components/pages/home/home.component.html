@@ -1,6 +1,13 @@
 <div class="home-container mt-5">
-  <h1 class="title mb-5">Veja o que estão compartilhando</h1>
-  <!-- form de busca -->
+  <h1 class="title mb-4">Veja o que estão compartilhando</h1>
+
+  <div class="input-group mb-4 d-flex justify-content-center">
+    <span class="input-group-text" id="fa-icon">
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </span>
+    <input type="text" class="form-control" placeholder="Ou busque por um momento..." (input)="search($event)">
+  </div>
+
   <div class="moments-container" *ngIf="moments.length > 0 ; else noMoments">
     <div class="moment" *ngFor="let moment of moments">
       <img src="{{ baseApiUrl }}uploads/{{ moment.image }}" alt="{{ moment.title  }}" />
