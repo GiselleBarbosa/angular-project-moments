@@ -9,27 +9,14 @@ a {
   transition: 0.5s;
 }
 
-.btn-navbar.moments {
+.link.moments {
   font-weight: 500;
   font-size: 1.2rem;
   transition: 0.5s;
 }
 
-.logo-moments{
+.logo-moments {
   width: 2rem;
-}
-
-.btn-navbar {
-  font-weight: 300;
-  font-size: 1.1rem;
-  transition: 0.5s;
-}
-
-.btn-navbar:hover,
-.btn-home:hover,
-a:hover  {
-  color: #dec129;
-  border-color: none;
 }
 
 .nav-item {
@@ -43,12 +30,12 @@ a:hover  {
 }
 
 @media (max-width: 560px) {
-  .btn-navbar,
+  .link,
   .btn-home,
   .brand {
     display: none;
   }
-  .logo-moments{
+  .logo-moments {
     display: none;
   }
 }
@@ -58,5 +45,3 @@ a:hover  {
     display: none;
   }
 }
-
-
