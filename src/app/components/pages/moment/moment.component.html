@@ -12,7 +12,7 @@
     <a href="/moments/edit/{{ moment.id }}">Editar
       <fa-icon [icon]="faEdit" class="ms-2"></fa-icon></a></button>
 
-    <button class="btn btn-outline-warning remove">Excluir
+    <button class="btn btn-outline-warning remove" (click)="onRemove(moment.id!)">Excluir
       <fa-icon [icon]="faTimes" class="ms-2 faTimes"></fa-icon>
     </button>
   </div>
