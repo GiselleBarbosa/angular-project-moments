@@ -14,7 +14,11 @@
 }
 
 .title {
-  font-weight: 500;
+  font-weight: 400;
+}
+
+span {
+  color: #dec129;
 }
 
 .moment {
@@ -24,8 +28,8 @@
 }
 
 .moment img {
-  width: 100%;
-  margin-bottom: 1em;
+  max-width: 90%;
+  margin-bottom: 0.5rem;
 }
 
 .moment h1,
@@ -33,7 +37,7 @@
   margin-bottom: 1em;
 }
 
-.link{
+.link {
   font-size: 0.9rem;
 }
 
@@ -53,7 +57,6 @@ a:hover {
   border-radius: 7px;
 }
 
-
-input{
+input {
   max-width: 60%;
 }
