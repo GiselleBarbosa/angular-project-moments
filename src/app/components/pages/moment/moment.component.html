@@ -8,15 +8,45 @@
 
   <div class="actions">
     <h3>Ações:</h3>
-   <button class="btn btn-outline-secondary edit me-3">
-    <a routerLink="/moments/edit/{{ moment.id }}">Editar
-      <fa-icon [icon]="faEdit" class="ms-2"></fa-icon></a></button>
+    <button class="btn btn-outline-secondary edit me-3">
+      <a routerLink="/moments/edit/{{ moment.id }}">Editar
+        <fa-icon [icon]="faEdit" class="ms-1 faEdit"></fa-icon></a></button>
 
     <button class="btn btn-outline-warning remove" (click)="removeHandler(moment.id!)">Excluir
-      <fa-icon [icon]="faTimes" class="ms-2 faTimes"></fa-icon>
+      <fa-icon [icon]="faTimes" class="ms-1 faTimes"></fa-icon>
     </button>
   </div>
   <div class="comments mt-3">
-    <h3>Comentários</h3>
+    <h3>Comentários ({{ moment.comments!.length > 0 ? moment.comments!.length : 0 }})
+    </h3>
+    <div *ngIf="moment.comments!.length > 0 ; else noComments">   
+      <div class="comment-container" *ngFor="let comment of moment.comments">
+        <p class="comment">{{ comment.text }}</p>
+        <p class="author"><span>criado por: </span>{{ comment.username }}</p>
+      </div>
+      <div class="comment-container">
+        <p class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia fringilla porta. Vestibulum varius, arcu vitae tempus consequat, ante magna finibus nulla, sit amet viverra neque leo non nunc.</p>
+        <p class="author"><span>
+           por: </span>Giselle Barbosa</p>
+      </div>
+    </div>
+    <ng-template #noComments>
+      <p>Não há comentários para este momento.</p>
+    </ng-template>
+  </div>
+  <div class="comment-form col-12">
+    <h3>Deixe um comentário: </h3>
+    <form class="was-validated">
+      <div class="form-group was-validation">
+        <label for="text">Comentário:</label>
+        <textarea class="form-control mt-3 is-invalid" placeholder="Deixe um comentário" id="floatingTextarea" required></textarea>
+      </div>
+      <div class="form-group mt-3">
+        <label class="mb-3 is-invalid" for="username">Nome:</label>
+        <br>
+        <input class="form-control" type="text" placeholder="Digite o seu nome" required>
+      </div>
+      <button class="btn btn-secondary mt-3 mb-4" type="submit">Comentar</button>
+    </form>
   </div>
 </div>

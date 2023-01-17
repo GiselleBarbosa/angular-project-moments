@@ -17,7 +17,6 @@ export class MomentComponent implements OnInit {
   moment?: Moment;
   baseApiUrl = environment.baseApiUrl;
 
-
   faTimes = faTimes;
   faEdit = faEdit;
 

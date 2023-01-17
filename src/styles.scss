@@ -52,10 +52,13 @@ body {
 }
 
 /*Buttons*/
-.edit a,
-.remove {
+.edit a{
   text-decoration: none;
-  color: #444;
-  transition: 0.7s;
   border: none;
+  color: #444;
 }
+
+.edit a:hover {
+  color: #fff;
+}
+

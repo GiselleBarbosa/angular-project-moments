@@ -8,12 +8,16 @@
   margin: 0 auto;
 }
 
+h3 {
+  font-weight: 500;
+}
+
 img {
-  max-width: 500px;
+  max-width: 400px;
   margin-bottom: 0 auto 1em;
 }
 
-.about-moment, 
+.about-moment,
 .actions {
   border-bottom: 1px solid #ccc;
   padding: 1.2em;
@@ -23,11 +27,14 @@ img {
 .actions {
   background-color: #eee;
   padding-bottom: 50px;
- 
 }
 
 .comments {
-  margin-bottom: 1em;
+  text-align: left;
+}
+
+span {
+  font-weight: bold;
 }
 
 .actions {
@@ -35,10 +42,28 @@ img {
   border-bottom: 1px solid #ccc;
 }
 
-.about-moment h3,
-.actions h3,
-.comments h3 {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
- }
+
+.faEdit {
+  filter: brightness(10%) sepia(10) hue-rotate(180deg) saturate(10);
+}
+
+.faEdit:hover {
+  filter: brightness(10000%) sepia(0) hue-rotate(10deg) saturate(1000);
+}
+
+.faTimes {
+  filter: brightness(50) sepia(1) hue-rotate(-60deg) saturate(100);
+}
+
+.faTimes:hover {
+  filter: brightness(10000%) sepia(0) hue-rotate(10deg) saturate(1000);
+}
+
+.remove:hover {
+  color: #fff;
+}
+
+/*Comentarios*/
+.moment-container {
+  text-align: left;
+}
