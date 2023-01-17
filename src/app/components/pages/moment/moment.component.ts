@@ -37,7 +37,7 @@ export class MomentComponent implements OnInit {
         (this.moment = item.data));
   }
 
-  async onRemove(id: number) {
+  async removeHandler(id: number) {
     await this.MomentService.removeMoment(id).subscribe();
     this.messagesService.add("Momento excluido com sucesso!");
     this.router.navigate(['/']);

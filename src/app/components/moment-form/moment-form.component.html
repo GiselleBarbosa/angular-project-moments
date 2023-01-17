@@ -3,6 +3,7 @@
     <div class="d-flex justify-content-center align-items-center flex-column">
       <form class="myForm was-validated" (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
 
+        <input type="hidden" class="mb-4" formControlName="id">
         <div class="col-mb-2">
           <label for="title" class="form-label">Título</label>
           <input type="text" class="form-control is-invalid" placeholder="Digite um titulo" formControlName="title"
@@ -27,7 +28,8 @@
 
         <div class="mb-3 mt-4">
           <label for="image" class="form-label">Foto deste momento</label>
-          <input type="file" class="form-control" (change)="onFileSelected($event)" required>
+          <input type="file" class="form-control" 
+          (change)="onFileSelected($event)" required>
         </div>
 
         <div class="submit mt-4 text-center">

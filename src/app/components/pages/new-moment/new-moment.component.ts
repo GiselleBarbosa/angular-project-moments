@@ -12,15 +12,23 @@ import { Router } from '@angular/router';
 })
 export class NewMomentComponent implements OnInit {
 
-  btnText: string = 'Compartilhar!';
+  btnText: string = 'Compartilhar';
+  image?: File;
 
   constructor(
     private momentService: MomentService,
     private messageService: MessagesService,
     private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+
+    this.image = file;
   }
+
+  buildForm() { }
 
   async createHandler(moment: Moment) {
     const formData = new FormData();
