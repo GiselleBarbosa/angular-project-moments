@@ -5,7 +5,7 @@
     <span class="input-group-text" id="fa-icon">
       <fa-icon [icon]="faSearch"></fa-icon>
     </span>
-    <input type="text" class="form-control" placeholder="Ou busque por um momento..." (input)="search($event)">
+    <input type="text" class="form-control" placeholder="busque momento..." (input)="search($event)">
   </div>
 
   <div class="moments-container" *ngIf="moments.length > 0 ; else noMoments">
