@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { Moment } from 'src/app/Moment';
+import { Comment } from '@angular/compiler';
+
 import { MomentService } from '../../../services/moment.service';
 import { MessagesService } from 'src/app/services/messages.service';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
+
 import { environment } from 'src/environments/environment';
 import { faTimes, faEdit } from '@fortawesome/free-solid-svg-icons';
 
@@ -38,7 +41,9 @@ export class MomentComponent implements OnInit {
 
   async removeHandler(id: number) {
     await this.MomentService.removeMoment(id).subscribe();
+
     this.messagesService.add("Momento excluido com sucesso!");
+
     this.router.navigate(['/']);
   }
 }

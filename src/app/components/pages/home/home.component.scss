@@ -32,18 +32,26 @@ span {
   margin-bottom: 0.5rem;
 }
 
-.moment h1,
-.moment p {
-  margin-bottom: 1em;
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.1rem;
+}
+
+.date {
+  color: gray;
+  font-style: italic;
+  font-size: 0.7rem;
+}
+
+.comments {
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+ 
 }
 
 .link {
   font-size: 0.9rem;
-}
-
-.moment .date {
-  font-size: 0.9em;
-  font-style: italic;
 }
 
 a {

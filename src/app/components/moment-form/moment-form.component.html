@@ -2,8 +2,7 @@
   <mat-card-content>
     <div class="d-flex justify-content-center align-items-center flex-column">
       <form class="myForm was-validated" (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
-
-        <input type="hidden" class="mb-4" formControlName="id">
+        <input type="hidden" class="form-control mb-4" formControlName="id">
         <div class="col-mb-2">
           <label for="title" class="form-label">Título</label>
           <input type="text" class="form-control is-invalid" placeholder="Digite um titulo" formControlName="title"
@@ -34,7 +33,9 @@
 
         <div class="submit mt-4 text-center">
           <div class="mb-3">
+            <button class="btn btn-secondary me-2" routerLink="/">Cancelar</button>
             <button class="btn btn-warning" type="submit"> {{ btnText }}</button>
+
           </div>
         </div>
       </form>
