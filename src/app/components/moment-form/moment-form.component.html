@@ -1,24 +1,42 @@
 <mat-card>
   <mat-card-content>
     <div class="d-flex justify-content-center align-items-center flex-column">
-      <form class="myForm was-validated" (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
-        <input type="hidden" class="form-control mb-4" formControlName="id">
+      <form
+        class="myForm was-validated"
+        (ngSubmit)="submit()"
+        [formGroup]="momentForm"
+        #formDir="ngForm"
+      >
+        <input type="hidden" class="form-control mb-4" formControlName="id" />
         <div class="col-mb-2">
           <label for="title" class="form-label">Título</label>
-          <input type="text" class="form-control is-invalid" placeholder="Digite um titulo" formControlName="title"
-            required>
-          <div class="invalid-feedback" *ngIf="title.invalid && formDir.submitted">
-            <p *ngIf="title.errors?.['required']">
-              Titulo é obrigatório
-            </p>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            placeholder="Digite um titulo"
+            formControlName="title"
+            required
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="title.invalid && formDir.submitted"          >
+            <p *ngIf="title.errors?.['required']">Titulo é obrigatório</p>
           </div>
         </div>
 
         <div class="col-mb-2 mt-4">
           <label for="title" class="form-label">Descrição</label>
-          <input type="text" class="form-control is-invalid" placeholder="Digite uma descrição do momento"
-            formControlName="description" required>
-          <div class="invalid-feedback" *ngIf="description.invalid && formDir.submitted">
+          <input
+            type="text"
+            class="form-control is-invalid"
+            placeholder="Digite uma descrição do momento"
+            formControlName="description"
+            required
+          />
+          <div
+            class="invalid-feedback"
+            *ngIf="description.invalid && formDir.submitted"
+          >
             <p *ngIf="description.errors?.['required']">
               Descrição é obrigatória
             </p>
@@ -27,15 +45,20 @@
 
         <div class="mb-3 mt-4">
           <label for="image" class="form-label">Foto deste momento</label>
-          <input type="file" class="form-control" 
-          (change)="onFileSelected($event)" required>
+          <input
+            type="file"
+            class="form-control"
+            (change)="onFileSelected($event)"
+            required
+          />
         </div>
 
         <div class="submit mt-4 text-center">
           <div class="mb-3">
-            <button class="btn btn-secondary me-2" routerLink="/">Cancelar</button>
-            <button class="btn btn-warning" type="submit"> {{ btnText }}</button>
-
+            <button class="btn btn-secondary me-2" routerLink="/">
+              Cancelar
+            </button>
+            <button class="btn btn-warning" type="submit">{{ btnText }}</button>
           </div>
         </div>
       </form>

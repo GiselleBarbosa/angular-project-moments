@@ -11,7 +11,7 @@ import { MessagesService } from 'src/app/services/messages.service';
 })
 export class EditMomentComponent implements OnInit {
   moment!: Moment;
-  btnText: string = 'Editar';
+  btnText: string = 'Confirmar';
 
   constructor(
     private route: ActivatedRoute,
